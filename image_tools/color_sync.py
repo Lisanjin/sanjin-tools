@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import torch
 
 def color_transfer(source, target):
     source = cv2.cvtColor(source, cv2.COLOR_BGR2LAB).astype("float32")
@@ -51,5 +52,5 @@ class ColorSync():
         result_rgb = cv2.cvtColor(result_bgr, cv2.COLOR_BGR2RGB).astype(np.float32) / 255.0
         result_rgb = np.expand_dims(result_rgb, axis=0)
 
-        return (result_rgb,)
+        return (torch.from_numpy(result_rgb),)
 

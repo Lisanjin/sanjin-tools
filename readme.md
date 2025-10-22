@@ -19,3 +19,7 @@
 ## ImageToLatent  
 
 创建图片大小的latent
+
+## ColorSync
+
+使图片色调保持与目标色调一致。主要用于修复Qwen-Image-Edit跑出来的图带有色差的问题。
